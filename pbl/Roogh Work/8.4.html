@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>APbrothers </title>
+    <link rel="stylesheet" href="sidenavbar.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'aside section section section '
+                'footer footer footer footer ';
+
+
+        }
+        body{
+            background-color: rgb(231, 235, 235);
+            /* background: white; */
+        }
+        .item {
+            /* background-color: rgb(194, 240, 240); */
+            /* border: 3px solid black; */
+            padding: 6px 23px;
+            
+            /* width: 100px;
+        height: 50px; */
+
+
+            overflow: hidden;
+            overflow-y: scroll;
+        }
+
+        /* navbar */
+        /* Navigation Bar */
+        #navbar {
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0px;
+            border: 1px solid black;
+            border-radius: 15px;
+            border-width: 2px;
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: rgb(7 65 94);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        /* Navigation Bar: Logo and Image */
+        #logo {
+            margin: 10px 85px;
+        }
+
+        #logo img {
+            height: 59px;
+            margin: 3px 6px;
+            width: 92px;
+            height: 49px;
+        }
+
+
+
+        /* Navigation Bar: List Styling */
+
+        #navbar ul {
+            display: flex;
+            font-family: 'Baloo Bhai', cursive;
+            /* 1 */
+            margin-right: 30px;
+        }
+
+        #navbar ul li {
+            list-style: none;
+            font-size: 1.3rem;
+            display: inline-block;
+        }
+
+        #navbar ul li a {
+            color: black;
+            background: #a5d8f6;
+            display: block;
+            padding: 0px 19px;
+            line-height: 39px;
+            margin: 2px 34px;
+            border-radius: 20px;
+            border: 1px solid rgb(230, 143, 143);
+            text-decoration: none;
+
+        }
+
+        /* 1 */
+        /* .div {
+    background-color: #47637a;
+    border: 1px solid red;
+    width: 25px;
+    height: 50px;
+} */
+        #navbar ul ul {
+            position: absolute;
+            top: 100px;
+            border-top: 3px solid #48afaf;
+            visibility: hidden;
+            display: block;
+            opacity: 0px;
+            margin: 20px 15px;
+        }
+        #navbar ul li a:active {
+            position: absolute;
+            top: 100px;
+            border-top: 3px solid #030505;
+            visibility: hidden;
+            display: block;
+            opacity: 0px;
+            margin: 20px 15px;
+        }
+
+        #navbar ul li:hover>ul {
+            opacity: 1;
+            top: 70px;
+            visibility: visible;
+            transition: 0.3s linear;
+        }
+
+        #navbar ul ul li {
+            display: list-item;
+            position: relative;
+            border-top: none;
+            border: 1px solid #042331;
+            border-top: none;
+        }
+
+        #navbar ul ul li a {
+            line-height: 50px;
+        }
+
+        #navbar ul ul ul {
+            border-top: none;
+        }
+
+        #navbar ul ul ul li {
+            position: relative;
+            top: 30px;
+            left: 120px;
+
+        }
+
+        #navbar ul ul li a i {
+            margin-left: 15px;
+        }
+
+
+        #navbar ul li a:hover {
+            color: black;
+            text-decoration: underline;
+            background-color: rgb(35, 97, 154);
+        }
+
+        #navbar ul li a:hover {
+            color: black;
+            text-decoration: underline;
+            background-color: rgb(48, 170, 218);
+        }
+
+        /* section */
+        #section {
+            grid-area: section;
+            overflow: hidden;
+            height: 600px;
+            overflow-y: scroll;
+            padding-left: 20px;
+            border-radius: 15px;
+            margin-right: 20px;
+            background-color: rgb(244, 244, 242);
+        }
+
+        /* aside */
+        #aside {
+            grid-area: aside;
+            overflow: auto;
+            height: 600px;
+            overflow-y: scroll;
+            padding-left: 20px;
+            border-radius: 15px;
+            margin-right: 1px;
+            background-color: white;
+
+            
+        }
+
+        /* footer */
+        footer {
+            background-color: black;
+            grid-area: footer;
+        }
+        footer.item{
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="/image/AP.jpeg" alt="MyOnlineMeal.com">
+        </div>
+        <ul>
+            <li ><a href="/pbl/project2index.html" class="box ">Home</a></li>
+            <li ><a href="#services-container" class="box">Services</a></li>
+            <li ><a href="dropdownlist.html" class="box">4</a></li>
+            <li ><a href="https://gcoeara.ac.in/contact.php" class="box">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <!-- <div id="navbar" class="item">
+            <nav id="navbar">
+                <div id="logo">
+                    <img src="/image/logo AVP.png" alt="MyOnlineMeal.com">
+                </div>
+                <ul>
+                    <li class="item" id="active"><a href="#home">Home</a></li>
+                    <li class="item"><a href="#services-container">Services</a></li>
+                    <li class="item"><a href="#client-section">Our Clients</a></li>
+                    <li class="item"><a href="https://gcoeara.ac.in/contact.php">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div> -->
+        <!-- <div id="section" class="item">
+            Lorem ipsum dolor, sit amet consectetur adipisic elit. Alias, rerum assumenda facere et voluptas praesentium
+            dolores sequi dolorem tium quos mollitia eos porro odit, distinctio consectetur in. Magni, quam accusamus
+            quibusdam eligendi nobis nulla, eveniet nesciunt hic perspiciatis maxime repudiandae excepturi, animi Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque quod labore, deserunt eligendi distinctio inventore quisquam ratione, omnis repellat vel voluptate aperiam tempora cum illo. Assumenda soluta officia enim! Tempore, magni dignissimos suscipit sunt recusandae labore, pariatur consequatur omnis quibusdam iure nisi? Cum quisquam architecto similique. Accusamus fugiat iure perspiciatis quis amet neque itaque beatae placeat officiis quos, id recusandae? Delectus dolorum aliquam modi est odio, quod ex quam, tempora quidem corrupti cumque nobis recusandae libero cum temporibus ipsam debitis consequuntur aperiam vitae. Amet explicabo cum omnis vitae esse incidunt ex! Cum aperiam amet nostrum provident voluptatem maiores porro quis, illo vero deserunt eos, blanditiis delectus commodi ea ex eligendi. Recusandae nobis quia accusantium libero inventore dolores illo reiciendis facilis, cum nostrum voluptatibus ratione distinctio culpa natus in. Cumque eaque error voluptates nihil doloremque, maxime explicabo quod neque, in, vel nemo eligendi enim et exercitationem. Iste animi perferendis minus ab maiores provident nihil incidunt, veniam fugit voluptatum, aspernatur veritatis nisi facere consectetur voluptas dolore aperiam et assumenda hic delectus neque molestiae. Possimus sunt vitae ex optio quae ipsum. Placeat, sapiente! Quam vero vel obcaecati veritatis doloremque dolores laboriosam, soluta cumque fugiat distinctio et ratione odit aliquam explicabo eaque velit impedit illum accusamus facere reprehenderit quos. Aspernatur perspiciatis quis velit amet laborum dolores laboriosam autem, porro eos vel distinctio corporis et culpa accusamus dolore eveniet nam minus magnam assumenda. Nesciunt sapiente aperiam expedita eligendi quidem saepe voluptatibus voluptatum culpa sint? Vitae accusamus voluptatem nemo quasi similique, possimus ipsam laborum in eaque. Aspernatur nobis tempora, sed alias atque autem voluptatibus maxime, sunt mollitia sit temporibus nihil. Praesentium, velit nobis, aperiam voluptates eaque numquam repellendus exercitationem hic id sed, repellat labore! At cum, delectus tenetur qui sit possimus est dolores commodi a quo corrupti totam vero sint? Dicta accusantium, id, praesentium nisi doloremque animi dignissimos fugit saepe eveniet assumenda quae voluptatibus et, sapiente provident porro officia! Consequatur ex voluptatum impedit quam distinctio, corporis ipsa officia quas itaque labore facere quaerat, asperiores, explicabo aspernatur cupiditate repudiandae quasi fugiat numquam a perferendis? Dolorum, ut? Pariatur, ratione debitis! Hic voluptatum ab numquam sit neque ullam quod asperiores in quas perspiciatis, quis magni eveniet aliquam facere quisquam earum possimus? Molestiae, laudantium. Doloremque, cupiditate voluptatem earum dolores unde soluta corrupti laborum voluptates, eligendi eum nobis et cumque deleniti voluptatibus maiores culpa autem quisquam repudiandae, deserunt possimus atque ipsa? Ipsa aliquid molestiae recusandae eveniet veritatis corrupti delectus atque vitae minus tempora aspernatur consectetur magni, aperiam minima in quia rerum obcaecati autem nobis velit temporibus nostrum est possimus aut? Obcaecati veniam dignissimos error vero ea cum consectetur praesentium? Porro, ipsam ab recusandae nam corporis, culpa error perferendis numquam ut odio, sint id nobis maiores illum et fugiat voluptatum accusamus beatae. Perferendis, expedita temporibus amet adipisci dignissimos omnis fuga voluptas harum atque. Officia nostrum doloribus ea fuga esse dicta voluptates perspiciatis earum facere excepturi ullam sapiente nihil, iusto, similique dignissimos in quas placeat animi, mollitia recusandae at vitae. Unde, exercitationem repellendus voluptates, veniam ipsum maxime adipisci quam aspernatur iusto expedita ipsa cupiditate. Eius dignissimos laudantium aliquam omnis illo repudiandae ipsam, doloribus explicabo consequuntur ab et odit voluptatum consequatur? Sit ullam qui, fugit nihil ipsam quidem aliquid odit eius sunt, cum similique consequatur iure, soluta aut sequi id et quae! Iure, quo quidem, ad impedit rerum minima unde officiis exercitationem explicabo beatae molestiae? Possimus, maxime modi ipsam sint delectus unde est explicabo quibusdam, dolores, rerum repellat nihil velit nemo cumque labore aspernatur atque aperiam quis natus? Soluta excepturi minus necessitatibus assumenda totam, nostrum ea eveniet repudiandae. Minus eveniet delectus, dolor aut quia cumque optio labore dolorum quidem reprehenderit odio iusto ex consequuntur quis, consequatur officiis dolore facere voluptas, repellendus voluptate veritatis est quaerat debitis minima. Amet sit at totam saepe quibusdam unde assumenda deserunt. Quia, aliquam hic molestiae maxime temporibus minus nostrum fuga placeat sequi! Officia repellendus, perspiciatis adipisci rerum facilis nostrum architecto corporis porro accusamus unde itaque, ipsum deserunt rem sit sed consequatur quasi quod cumque amet, et tenetur. Cumque nesciunt asperiores assumenda ipsum enim vero minus, nostrum unde laborum maiores dolores laboriosam. Iusto veritatis quidem eveniet tenetur reprehenderit blanditiis, maxime enim rem eos, accusantium doloremque delectus? Suscipit ex rem nostrum facere. Nemo velit nostrum culpa magnam pariatur voluptatum ullam excepturi quidem quis asperiores odit, doloremque voluptatibus et inventore modi tenetur, odio dicta assumenda ratione explicabo! Debitis illo nam officia, culpa illum alias ut sint necessitatibus saepe beatae architecto, laborum quasi omnis sit similique libero dolore ipsa nemo vel velit molestiae fugiat accusantium? Saepe laborum veniam ab mollitia id et labore illo itaque deserunt debitis, accusamus perferendis beatae nihil delectus obcaecati amet nesciunt magnam laudantium eveniet numquam provident. At inventore id cum fugiat culpa impedit pariatur, nisi sunt atque tempore quis modi mollitia perferendis alias tempora voluptates aspernatur deserunt quod harum non ut consequuntur obcaecati repellendus voluptas? Rerum dolorum enim temporibus molestias praesentium quibusdam nulla eius obcaecati vitae nam dignissimos dicta quas adipisci fugiat, quo tenetur, aut, aliquam maiores expedita provident numquam quod eum et quos. Reiciendis, dignissimos rem, fugiat voluptate magnam minus cupiditate ut assumenda ex quas officia? Harum eius iure corrupti in dolorum, omnis quod praesentium error veniam. Cupiditate magnam quas reiciendis id. Necessitatibus, vitae ipsam sequi eligendi explicabo, doloribus corrupti tempore ducimus iure, aperiam laudantium praesentium asperiores fuga cupiditate commodi? Natus in quod saepe, commodi cupiditate est eveniet facilis illum debitis dolorum similique maiores ab, minima ratione vitae illo. Magni accusantium expedita fugiat amet? Maiores soluta maxime officiis aperiam laboriosam ipsam neque cumque alias quae, excepturi voluptatibus voluptates saepe nisi quidem, nam recusandae suscipit consequatur a voluptate et id minus sunt deserunt! Exercitationem autem recusandae repellat quos veniam, cupiditate architecto velit sint dicta expedita accusamus ratione porro deleniti earum at aperiam rerum nesciunt fugit. Distinctio suscipit exercitationem reprehenderit, ipsa nisi corrupti inventore cumque, consequatur dolor sit illo esse magnam, ut facere. Odio iusto accusamus eaque? Facere incidunt fugiat optio reiciendis? Qui praesentium autem nihil maiores saepe perferendis quisquam iusto officiis optio fuga, suscipit eius porro recusandae voluptas libero nostrum veniam vero sunt voluptatem? Doloribus quis sapiente dolores in?
+            consequuntur. Nam tempore exercitationem ad laboriosam libero quis inventore iste minus illo totam? Rem,
+            eligendi excepturi ducimus similique vero doloribus eveniet quas doloremque. Doloribus tenetur voluptatibus
+            quo sit deserunt laboriosam doloremque. Eaque aliquam error incidunt? Illo rem quibusdam numquam omnis
+            aliquam ipsam, doloremque sequi mollitia nobis harum eius suscipit officiis labore, fugit nemo quidem autem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe obcaecati magnam repudiandae aliquid adipisci, nesciunt soluta laudantium, eveniet hic at eaque qui debitis commodi distinctio animi non eum excepturi, magni ipsam. Dolorum id corporis, magnam rerum perspiciatis ullam dicta, accusantium voluptatibus molestiae, est et sunt illo pariatur odio voluptatem. Dignissimos fugit eius expedita ipsam illum doloremque repudiandae libero inventore facilis sapiente cupiditate blanditiis reprehenderit, sint deserunt non optio deleniti neque totam omnis? Minus molestiae fugiat ea esse nisi optio, voluptatum ex tempora quo! Voluptas iste ut cupiditate quaerat veniam non magnam, eos nemo, at sit nesciunt porro labore blanditiis vitae.
+            ex, eos quisquam iusto. Maxime totam debitis quis provident pariatur fugiat aliquam, alias praesentium? Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ratione quos autem error rem molestiae natus fuga dolorum molestias? Amet voluptate quis, perferendis sint delectus possimus officiis inventore saepe laborum pariatur accusantium tenetur blanditiis quo aspernatur explicabo harum laudantium consectetur, quibusdam non eum ea. Odit accusamus veniam officiis corrupti repudiandae minus laboriosam non, numquam blanditiis repellat eos perspiciatis sed facilis cupiditate asperiores dolorem odio atque sunt ut magni quas a vero! Explicabo fugiat quo maiores maxime iusto suscipit eius alias incidunt perspiciatis? Ratione doloribus, maxime consectetur fugit beatae velit architecto obcaecati dolores, perspiciatis eius exercitationem. Magni modi voluptatibus amet! Hic explicabo sit laborum perspiciatis maiores dolor sapiente dicta, adipisci tempore atque nesciunt cum voluptates quibusdam eum voluptas culpa beatae officia laboriosam velit natus ipsa vero doloribus. Omnis voluptates ut in laboriosam iure nihil nulla, hic eos. Eum sequi veritatis aliquam, exercitationem iure deserunt aperiam ducimus, incidunt laboriosam amet consequatur sint enim perspiciatis totam, itaque animi ea quaerat consequuntur nulla. Possimus aliquam, aut numquam nobis quis placeat molestiae necessitatibus, explicabo dignissimos eos, vitae fugit? Ducimus, asperiores est facere, similique accusamus ex dicta molestias minus harum nam fugiat. Quis sit ducimus cupiditate corporis recusandae nemo dicta quibusdam accusamus, eos, incidunt earum doloribus vitae quaerat consequatur dolore ad, provident similique porro. Voluptatem laudantium incidunt id dolore illum iusto deleniti optio molestias vitae soluta porro consequuntur, suscipit illo dolorum numquam ipsam quo recusandae reiciendis esse sunt eveniet. Quis necessitatibus voluptatum omnis ex vel officiis? Necessitatibus exercitationem fugit doloremque ducimus! Obcaecati est, reprehenderit quos inventore cupiditate illo nesciunt? Corrupti ipsam amet eos, minus corporis rem repellat tempore cumque quidem, autem minima esse non ea reprehenderit! Ex qui beatae, pariatur incidunt, ratione perferendis iure voluptas hic maxime ducimus veritatis! Repellat, mollitia provident. Eos ipsum harum quibusdam necessitatibus temporibus odio, dicta nemo at quam cum maxime deserunt libero exercitationem, qui sit deleniti voluptate est ab explicabo natus? Laudantium quaerat voluptates numquam enim quisquam atque mollitia magnam nam ad facere harum cumque eveniet ratione, exercitationem amet qui voluptatibus blanditiis sunt, rem in explicabo? Debitis eius saepe consectetur ut, vero culpa nesciunt labore corrupti, dolore error non dolorum quasi, tempora iure ipsum! Iure et beatae consequuntur placeat dolore recusandae, excepturi impedit laborum! Ab amet ad placeat laboriosam? Quaerat, facilis aperiam reiciendis omnis natus necessitatibus quidem ut odit dolorem alias corporis ratione veritatis veniam error! Soluta, quo. Dolorem temporibus fugit eveniet, qui veritatis, aut, atque doloremque debitis cumque aspernatur accusantium?
+            Laudantium sint, aliquam porro obcaecati numquam at explicabo totam harum iure debitis asperiores quod
+            cumque neque dolores accusantium, tempore ipsa quo quae perspiciatis aperiam natus reprehenderit dolorum
+            quam. Consectetur, laborum voluptatibus ullam libero voluptas perspiciatis maiores eligendi id dolorum
+            suscipit perferendis blanditiis, dignissimos nemo consequuntur voluptate tempora velit numquam, eos maxime
+            optio voluptatem odio. Sequi et tempore a quos praesentium.
+        </div> -->
+        <!-- <div id="aside" class="item">
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions</title>
+    <link rel="stylesheet" href="stylevaishu.css">
+</head>
+<body><nav class="sidebar">
+    <header>
+        <div class="image-text">
+            <span class="image">
+                <img src="logo.png" alt="logo">
+            </span>
+            <div class="header-text"></div>
+                <span class="name">Vaishnavi</span> 
+                <hr><span class="profession">Admissions</span> 
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+    </header>
+    <div class="menu-bar">
+        <div class="menu">
+            <li class="search-box">
+                <i class="bx bx-search icon"></i>
+                <input type="search" placeholder="Search here">
+                
+            </li>
+            <ul class="menu-links">
+                <li class="nav-link">
+                    <a href="7.html">
+                        <i class="bx bx-home-alt icon"></i>
+                        <span class="text nav-text">Eligibilty</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">
+                        <i class='bx bxs-user-account icon'></i>
+                        <span class="text nav-text">Myself</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">
+                        <i class="bx bx-bell icon"></i>
+                        <span class="text nav-text">Notification</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">
+                        <i class="bx bx-pie-chart-alt icon"></i>
+                        <span class="text nav-text">Growth</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">
+                        <i class="bx bx-heart icon"></i>
+                        <span class="text nav-text">Social Media</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">
+                        <i class="bx bx-wallet icon"></i>
+                        <span class="text nav-text">Money</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="bottom-content">
+            <li class="nav-link">
+                <a href="#">
+                    <i class="bx bx-log-out icon"></i>
+                    <span class="text nav-text">Logout</span>
+                </a>
+            </li>
+            <li class="mode">
+                <div class="moon-sun">
+                    <i class="bx bx-moon icon moon"></i>
+                    <i class="bxbx-sun icon sun"></i>
+                    <span class="mode-text text">Dark Mode</span>
+                </div>
+                <div class="toggle-switch">
+                    <span class="switch"></span>
+                </div>
+            </li>
+            
+        </div>
+    </div>
+</nav> -->
+
+    
+</body>
+</html>
+        </div>
+
+        </div>
+        <!-- <footer class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident quo libero cumque.
+        </footer> -->
+        
+    </div>
+    <hr>
+    <br>
+    <br>
+    <hr>
+</body>
+
+</html>

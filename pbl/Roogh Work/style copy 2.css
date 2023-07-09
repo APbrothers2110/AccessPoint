@@ -1,0 +1,394 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+/* marquee tag  */
+.top-header {
+    background: #2f84c8;
+    padding: 5px 0px;
+    border-bottom: 1px solid #3131315e;
+}
+.news-list {
+    background: white;
+    color: red;
+    padding: 6px;
+    font-size: 20px;
+}
+
+.headquote {
+    font-size: 18px;
+    text-decoration: underline;
+    color: white;
+    width: 80%;
+}
+
+
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    border: 1px solid black;
+    border-radius: 15px;
+    border-width: 2px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: rgb(7 65 94);
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+} 
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 59px;
+    margin: 3px 6px;
+    width: 92px;
+    height: 49px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+    /* 1 */
+    margin-right: 30px;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+    display:inline-block ;
+}
+
+#navbar ul li a{
+    color: white;
+    background: #042331;
+    display: block;
+    padding: 3px 22px;
+    line-height: 39px;
+    margin: 20px;
+    border-radius: 20px;
+    border: 1px solid rgb(230, 143, 143);
+    text-decoration: none;
+}
+/* 1 */
+/* .div {
+    background-color: #47637a;
+    border: 1px solid red;
+    width: 25px;
+    height: 50px;
+} */
+#navbar ul ul{
+    position: absolute;
+    top: 100px;
+    border-top: 3px solid #23dbdb;
+    visibility: hidden;
+    display: block;
+    opacity: 0px;
+    margin: 20px 15px;
+}
+
+#navbar ul li:hover > ul{
+    opacity: 1;
+    top: 70px;
+    visibility: visible;
+    transition:0.3s linear;
+}
+#navbar ul ul li{
+    display: list-item;
+    position: relative;
+    border-top: none;
+    border: 1px solid #042331;
+    border-top: none;
+}
+#navbar ul ul li a{
+    line-height: 50px;
+}
+#navbar ul ul ul {
+border-top:none ;
+}
+#navbar ul ul ul li{
+    position: relative;
+    top: 30px;
+    left: 120px;
+    
+}
+#navbar ul ul li a i{
+    margin-left: 15px;
+}
+
+
+#navbar ul li a:hover{
+    color: black;
+    text-decoration: underline;
+    background-color: rgb(172, 212, 249);
+}
+#navbar ul  li a:hover{
+    color: black;
+    text-decoration: underline;
+    background-color: rgb(172, 212, 249);
+}
+
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('college.jpg') no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:10.9;
+}
+
+#home h1{
+    color:white;
+    text-align: center;
+    font-family: monospace;
+}
+#home marquee{
+    font-size: 29px;
+    color: white;
+    width: 22%;
+    text-decoration:white underline;
+
+}
+
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+/* Services Section */
+.services {
+    margin-left: 10px;
+    margin-right: 10px;
+    /* background-color: white; */
+    padding: 20px;
+    height: 360px;
+    margin-bottom: 30px;
+}
+
+.box {
+    width: 100%;
+    float: left;
+    /* border-bottom: 1px solid #cfcfcf; */
+    padding-bottom: 0px;
+    margin: 0px;
+    margin-bottom: 15px;
+    /* border: 1px solid grey; */
+    padding-top: 15px;
+    padding-left: 15px;
+    background-color:rgb(96, 153, 213);
+    /* color: white; */
+    overflow: hidden;
+}
+
+.h-secondary center {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 200;
+  
+    padding-bottom: 5px;
+
+}
+
+.latest-news-ul {
+    padding: 0;
+    list-style: none;
+    line-height: 40px;
+
+} 
+#services{
+    margin: 34px;
+    display: flex;
+}
+.box button{
+    overflow: hidden;
+}
+#services .box{ 
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+}
+
+#services .box img{ 
+   height: 195px;
+   margin: auto;
+   display: block;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+
+} 
+
+#services button.principal{
+    position: absolute;
+    margin: 44px -17px;
+    width: 103px;
+    padding: 8px;
+    /* height: 17px; */
+    text-align: center;
+    /* align-items: center; */
+    border-radius: 36px;
+    background: darkgrey;
+    border: 1px solid black;
+    
+}
+#services button{
+    position: absolute;
+    margin: -12px -28px;
+    width: 103px;
+    padding: 8px;
+    /* height: 17px; */
+    text-align: center;
+    /* align-items: center; */
+    border-radius: 36px;
+    background: darkgrey;
+    border: 1px solid black;font-size: 18px;
+}
+#services button:hover{
+    text-decoration: red underline;
+    background-color:rgb(125, 191, 232);
+}
+
+/* Clients Section */
+
+#client-section.client-items{
+    float: left;
+    position: absolute;
+}
+#pritesh{
+    background-color: aqua;
+    border: 1px solid red;
+    width: 100%;
+    height: 100%;
+}
+
+.client-images{
+    position: relative;
+    /* float: right; */
+}
+
+#clients-section img{
+    height: 124px;
+    padding: 25px 25px;
+    margin: 25px 25px;
+    width: 100px;
+}
+
+
+/* Contact Section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../contact.jpg') no-repeat center center/cover;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+
+}
+
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.center{
+    text-align: center;
+}

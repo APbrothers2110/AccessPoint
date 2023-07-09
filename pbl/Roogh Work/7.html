@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>APbrothers </title>
+    <link rel="stylesheet" href="sidenavbar.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                'navbar navbar navbar navbar navbar navbar navbar navbar navbar'
+                'aside section section section section section section section section'
+                'footer footer footer footer  footer footer footer footer footer';
+
+
+        }
+        body{
+            background-color: rgb(231, 235, 235);
+            /* background: white; */
+        }
+        .item {
+            /* background-color: rgb(194, 240, 240); */
+            /* border: 3px solid black; */
+            padding: 6px 23px;
+            
+            /* width: 100px;
+        height: 50px; */
+
+
+            overflow: hidden;
+            overflow-y: scroll;
+        }
+
+        /* navbar */
+        /* Navigation Bar */
+        #navbar {
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0px;
+            border: 1px solid black;
+            border-radius: 15px;
+            border-width: 2px;
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: rgb(7 65 94);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        /* Navigation Bar: Logo and Image */
+        #logo {
+            margin: 10px 85px;
+        }
+
+        #logo img {
+            height: 59px;
+            margin: 3px 6px;
+            width: 92px;
+            height: 49px;
+        }
+
+
+
+        /* Navigation Bar: List Styling */
+
+        #navbar ul {
+            display: flex;
+            font-family: 'Baloo Bhai', cursive;
+            /* 1 */
+            margin-right: 30px;
+        }
+
+        #navbar ul li {
+            list-style: none;
+            font-size: 1.3rem;
+            display: inline-block;
+        }
+
+        #navbar ul li a {
+            color: black;
+            background: #a5d8f6;
+            display: block;
+            padding: 0px 19px;
+            line-height: 39px;
+            margin: 2px 34px;
+            border-radius: 20px;
+            border: 1px solid rgb(230, 143, 143);
+            text-decoration: none;
+
+        }
+
+        /* 1 */
+        /* .div {
+    background-color: #47637a;
+    border: 1px solid red;
+    width: 25px;
+    height: 50px;
+} */
+        #navbar ul ul {
+            position: absolute;
+            top: 100px;
+            border-top: 3px solid #48afaf;
+            visibility: hidden;
+            display: block;
+            opacity: 0px;
+            margin: 20px 15px;
+        }
+        
+
+        #navbar ul li:hover>ul {
+            opacity: 1;
+            top: 70px;
+            visibility: visible;
+            transition: 0.3s linear;
+        }
+
+        #navbar ul ul li {
+            display: list-item;
+            position: relative;
+            border-top: none;
+            border: 1px solid #042331;
+            border-top: none;
+        }
+
+        #navbar ul ul li a {
+            line-height: 50px;
+        }
+
+        #navbar ul ul ul {
+            border-top: none;
+        }
+
+        #navbar ul ul ul li {
+            position: relative;
+            top: 30px;
+            left: 120px;
+
+        }
+
+        #navbar ul ul li a i {
+            margin-left: 15px;
+        }
+
+
+        #navbar ul li a:hover {
+            color: black;
+            text-decoration: underline;
+            background-color: rgb(35, 97, 154);
+        }
+
+        #navbar ul li a:hover {
+            color: black;
+            text-decoration: underline;
+            background-color: rgb(48, 170, 218);
+        }
+
+        /* section */
+        #section {
+            grid-area: section;
+            overflow: hidden;
+            height: 600px;
+            overflow-y: scroll;
+            padding-left: 20px;
+            border-radius: 15px;
+            margin-right: 20px;
+            background-color: rgb(244, 244, 242);
+        }
+
+        /* aside */
+        #aside {
+            grid-area: aside;
+            overflow: auto;
+            height: 600px;
+            overflow-y: scroll;
+            padding-left: 20px;
+            border-radius: 15px;
+            margin-right: 1px;
+            background-color: white;
+            position: relative;
+            /* width: 250px; */
+
+            
+        }
+
+        /* footer */
+        footer {
+            background-color: black;
+            grid-area: footer;
+        }
+        footer.item{
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="/image/AP.jpeg" alt="MyOnlineMeal.com">
+        </div>
+        <ul>
+            <li class="box active"><a href="/pbl/project2index.html" >Home</a></li>
+            <li class="box"><a href="sem1.html" >SEM-1</a></li>
+            <li class="box"><a href="sem2.html" >SEM-2</a></li>
+            <li class="box"><a href="" >subject</a></li>
+
+            <li class="box"><a href="https://gcoeara.ac.in/contact.php">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <!-- <div id="navbar" class="item">
+            <nav id="navbar">
+                <div id="logo">
+                    <img src="/image/logo AVP.png" alt="MyOnlineMeal.com">
+                </div>
+                <ul>
+                    <li class="item" id="active"><a href="#home">Home</a></li>
+                    <li class="item"><a href="#services-container">Services</a></li>
+                    <li class="item"><a href="#client-section">Our Clients</a></li>
+                    <li class="item"><a href="https://gcoeara.ac.in/contact.php">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div> -->
+        <div id="section" class="item">
+            <div class="dog">
+                <embed src="physics/Phy U3(MCQs)08-07.pdf" type="application/pdf" width="100%" height="700px" />
+            </div>
+        </div>
+        <div id="aside" class="item">
+            <div class="nav">
+            <label for="btn" class="button">In-Sem
+                <i class='bx bx-chevron-down'></i>                    
+            </label>
+            <input type="checkbox" id="btn">
+            <ul class="menu">
+                <li><a href="sem2.html">MCQ</a></li>
+                <li>
+                    <label for="btn-2" class="first">Unit-1
+                        <i class='bx bx-chevron-down'></i>         
+                    </label>
+                    <input type="checkbox" id="btn-2">
+                    <ul>
+                        <li><a href="">Interference</a></li>
+                        <li><a href="#">Diffraction</a></li>
+                        <li><a href="#">Polarization</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="btn-3" class="first">Unit-2
+                        <i class='bx bx-chevron-down'></i>         
+                    </label>
+                    <input type="checkbox" id="btn-3">
+                    <ul>
+                        <li><a href="#">Laser</a></li>
+                        <li><a href="#">Optic Fiber</a></li>
+                    
+                    </ul>
+                </li>
+                <!-- <label for="btn-3" class="first">Entc</label>
+                <label for="btn-3" class="first">Civil</label>
+                <label for="btn-3" class="first">Services</label> -->
+            </ul>
+        </div>
+        <br>
+        <div class="nav">
+            <label for="dog" class="button">End-Sem
+                <i class='bx bx-chevron-down'></i>                    
+            </label>
+            <input type="checkbox" id="dog">
+            <ul class="menu">
+                <li><a href="#home">MCQ</a></li>
+                <li>
+                    <label for="dog-1" class="first">Unit-3
+                        <i class='bx bx-chevron-down'></i>         
+                    </label>
+                    <input type="checkbox" id="dog-1">
+                    <ul>
+                        <li><a href="#">chapter-1</a></li>
+                     
+                    </ul>
+                </li>
+                <li>
+                    <label for="dog-2" class="first">Unit-4
+                        <i class='bx bx-chevron-down'></i>         
+                    </label>
+                    <input type="checkbox" id="dog-2">
+                    <ul>
+                        <li><a href="#">chapter-1</a></li>
+               
+                    </ul>
+                </li>
+                <li>
+                    <label for="dog-1" class="first">Unit-5
+                        <i class='bx bx-chevron-down'></i>         
+                    </label>
+                    <input type="checkbox" id="dog-1">
+                    <ul>
+                        <li><a href="#">chapter-1</a></li>
+                        <li><a href="#">chapter-2</a></li>
+                      
+
+                    </ul>
+                </li><li>
+                    <label for="dog-1" class="first">Unit-6
+                        <i class='bx bx-chevron-down'></i>         
+                    </label>
+                    <input type="checkbox" id="dog-1">
+                    <ul>
+                        <li><a href="#">chapter-1</a></li>
+                        <li><a href="#">chapter-2</a></li>
+                     
+
+                    </ul>
+                </li>
+                <!-- <label for="btn-3" class="first">Entc</label>
+                <label for="btn-3" class="first">Civil</label>
+                <label for="btn-3" class="first">Services</label> -->
+            </ul>
+        </div>
+
+        </div>
+        <footer class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident quo libero cumque.
+        </footer>
+        
+    </div>
+</body>
+
+</html>
